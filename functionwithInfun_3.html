@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Prime number assigmnet4_3
+	</title>
+
+	<script type="text/javascript">
+
+
+		function myfun() {
+			let isPrime = true;
+			var number, i, flag = false;
+			number = document.myform.number.value;
+			number = parseInt(number)
+		
+			if (number == 1) {
+				alert("1 is neither prime nor composite number.");
+			}
+
+
+			else if (number > 1) {
+
+
+				for (let i = 2; i < number; i++) {
+					if (number % i == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+
+				if (isPrime) {
+					alert(`${number} is a prime number`)
+				} else {
+					alert(`${number} is not a prime number`)
+				}
+			}
+
+			else {
+				alert("The number is not a prime number.")
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+
+	<h4>Check Number Is Prime Or Not</h4>
+
+	
+
+	<form name="myform">
+		Enter the number:
+		<input type="text" name=number value="">
+
+		<br><br>
+
+		<input type="button" value="Check" onClick="myfun()">
+		<br>
+	</form>
+
+</body>
